@@ -9,7 +9,7 @@ import (
 func main() {
 	makeFile("1.txt")
 
-	if err := os.Mkdir("/tmp/test-dir", 0666); err != nil {
+	if err := os.Mkdir("/tmp/test-dir", 0777); err != nil {
 		fmt.Println(err)
 	}
 	makeFile("/tmp/test-dir/2.txt")
